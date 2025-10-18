@@ -84,6 +84,26 @@ bash shared/install_kali_tools.sh
 
 > The installer script installs a curated set of extra tools. If you prefer a minimal environment, skip the script and install only what you need.
 
+## Issue or Errors:
+
+If you an issue like this:
+
+```bash
+$ ./install_kali_tools.sh
+env: ‘bash\r’: No such file or directory
+env: use -[v]S to pass options in shebang lines
+```
+
+Then install a tool `dos2unix` by running the command below:
+```bash
+$ sudo apt update && sudo apt install -y dos2unix
+$ dos2unix shared/install_kali_tools.sh  # run with sudo if operation not permitted
+```
+
+Now run the script again:
+```bash
+bash shared/install_kali_tools.sh
+```
 ---
 
 # Persisting changes (important)
