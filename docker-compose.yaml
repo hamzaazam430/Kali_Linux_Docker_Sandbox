@@ -6,7 +6,7 @@ services:
     container_name: kali_sandbox
     # network_mode: none # No internet access
     network_mode: bridge # bridged internet access
-    # network_mode: host # bridged internet access
+    # network_mode: host # host internet access
     user: sandbox
     volumes:
       - ./shared:/home/sandbox/shared
