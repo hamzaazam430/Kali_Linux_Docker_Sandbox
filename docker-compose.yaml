@@ -5,17 +5,11 @@ services:
       dockerfile: Dockerfile
     container_name: kali_sandbox
     # network_mode: none # No internet access
-    # network_mode: bridge # bridged internet access
-    network_mode: host # bridged internet access
+    network_mode: bridge # bridged internet access
+    # network_mode: host # bridged internet access
     user: sandbox
     volumes:
       - ./shared:/home/sandbox/shared
-      # - kali_dpkg:/var/lib/dpkg
-      # - kali_apt_lists:/var/lib/apt/lists
-      # - kali_apt_cache:/var/cache/apt/archives
-      # - kali_usr_local:/usr/local
-      # - kali_opt:/opt
-      # - kali_home:/home/sandbox
     stdin_open: true
     tty: true
     restart: "no"
@@ -24,12 +18,3 @@ services:
     devices:
       - /dev/net/tun
 
-# for persistent storage/volumes uncomment the above and following lines
-
-# volumes:
-#   kali_dpkg:
-#   kali_apt_lists:
-#   kali_apt_cache:
-#   kali_usr_local:
-#   kali_opt:
-#   kali_home:
