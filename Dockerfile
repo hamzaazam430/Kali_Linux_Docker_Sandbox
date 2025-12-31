@@ -10,6 +10,7 @@ RUN apt-get update \
       iputils-ping \
       net-tools \
       python3 \
+      socat \
  && apt-get clean
 #  && rm -rf /var/lib/apt/lists/*
 
